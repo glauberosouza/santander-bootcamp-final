@@ -1,5 +1,12 @@
 ﻿# Projeto Final Santander Bootcamp 2023 em Parceria com a Dio.
  JAVA API RESTFUL 
+ 
+ ## Principais Tecnologias
+ - **Java 17**
+ - **Spring Boot 3**
+ - **Spring Data JPA**
+ - **OpenAPI (Swagger)**
+ - **Railway**
 
  ## Diagrama de classes
 

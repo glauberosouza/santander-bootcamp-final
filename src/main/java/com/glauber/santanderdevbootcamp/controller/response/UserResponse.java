@@ -4,6 +4,7 @@ import com.glauber.santanderdevbootcamp.domain.model.Account;
 import com.glauber.santanderdevbootcamp.domain.model.Card;
 import com.glauber.santanderdevbootcamp.domain.model.Feature;
 import com.glauber.santanderdevbootcamp.domain.model.News;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@Data
 public class UserResponse {
     private Long id;
     private String name;

@@ -36,4 +36,18 @@ public class UserController {
         UserResponse userResponse = userConverter.toUserResponse(userEntity);
         return ResponseEntity.status(HttpStatus.CREATED).body(userResponse);
     }
+
+    @PutMapping("/{userId}")
+    public ResponseEntity<UserResponse> updateUser(@PathVariable Long userId, @RequestBody UserRequest userRequest) {
+        User userEntity = userConverter.toUserEntity(userRequest);
+        User userUpdated = userService.updateUser(userEntity, userId);
+        UserResponse userResponse = userConverter.toUserResponse(userUpdated);
+        return ResponseEntity.status(HttpStatus.OK).body(userResponse);
+    }
+
+    @DeleteMapping("/{userId}")
+    public ResponseEntity<Void> deleteUserById(@PathVariable Long userId) {
+        userService.delete(userId);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
